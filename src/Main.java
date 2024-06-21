@@ -5,10 +5,12 @@ public class Main {
 
         System.out.println("Hello World");
 
+        /*
         String primernum = JOptionPane.showInputDialog("Ingrese el primer numero");
         String segundonum = JOptionPane.showInputDialog("Ingrese el segundo numero");
 
         //convertir los string en INT
+
         int numero1 = Integer.parseInt(primernum);
         int numero2 = Integer.parseInt(segundonum);
         int suma = numero1 + numero2; // sumar numeros
@@ -20,7 +22,13 @@ public class Main {
         JOptionPane.showMessageDialog(null,"El resultado de la resta es: " + resta,"Resta de dos enteros",JOptionPane.PLAIN_MESSAGE);
         JOptionPane.showMessageDialog(null,"El resultado de la multiplicacion es: " + multiplicacion,"Multiplicacion de dos enteros",JOptionPane.PLAIN_MESSAGE);
         JOptionPane.showMessageDialog(null,"El resultado de la division es: " + division,"Division de dos enteros",JOptionPane.PLAIN_MESSAGE);
+         */
 
+        JFrame frame = new JFrame("Mi aplicación");
+        frame.setContentPane(new form1() .mainPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
 
 
