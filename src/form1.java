@@ -7,7 +7,7 @@ public class form1 {
 
     private JButton multiplica;
     public JPanel mainPanel;
-    private JLabel nombre_lbl;
+    private JLabel respuesta1;
     private JButton suma;
     private JTextField num2;
     private JButton divide;
@@ -18,6 +18,7 @@ public class form1 {
     private JButton seno;
     private JButton coseno;
     private JButton tangente;
+    private JLabel respuesta2;
 
     public form1() {
         multiplica.addActionListener(new ActionListener() {
@@ -26,7 +27,9 @@ public class form1 {
                 float numero1 = Float.parseFloat(num1.getText());
                 float numero2 = Float.parseFloat(num2.getText());
                 float resultado = numero1 * numero2;
-                nombre_lbl.setText("Respuesta: "+ resultado);
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
+                respuesta2.setText("");
+
             }
         });
         suma.addActionListener(new ActionListener() {
@@ -35,7 +38,9 @@ public class form1 {
                 float numero1 = Float.parseFloat(num1.getText());
                 float numero2 = Float.parseFloat(num2.getText());
                 float resultado = numero1 + numero2;
-                nombre_lbl.setText("Respuesta: "+ resultado);
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
+                respuesta2.setText("");
+
             }
         });
         divide.addActionListener(new ActionListener() {
@@ -44,10 +49,12 @@ public class form1 {
                 float numero1 = Float.parseFloat(num1.getText());
                 float numero2 = Float.parseFloat(num2.getText());
                 if (numero2 == 0) {
-                    nombre_lbl.setText("No se puede dividir para 0");
+                    respuesta1.setText("No se puede dividir para 0");
                 }else {
                     float resultado = numero1 / numero2;
-                    nombre_lbl.setText("Respuesta: " + resultado);
+                    respuesta1.setText("Respuesta: " + String.format("%.2f", resultado));
+                    respuesta2.setText("");
+
                 }
             }
         });
@@ -58,7 +65,32 @@ public class form1 {
                 float numero1 = Float.parseFloat(num1.getText());
                 float numero2 = Float.parseFloat(num2.getText());
                 float resultado = numero1 - numero2;
-                nombre_lbl.setText("Respuesta: "+ resultado);
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
+                respuesta2.setText("");
+
+            }
+        });
+        potencia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado = (float) Math.pow(numero1,numero2);
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
+                respuesta2.setText("");
+
+            }
+        });
+        raiz.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.sqrt(numero1);
+                float resultado2 = (float) Math.sqrt(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+
             }
         });
     }
