@@ -13,6 +13,11 @@ public class form1 {
     private JButton divide;
     private JTextField num1;
     private JButton resta;
+    private JButton raiz;
+    private JButton potencia;
+    private JButton seno;
+    private JButton coseno;
+    private JButton tangente;
 
     public form1() {
         multiplica.addActionListener(new ActionListener() {
