@@ -93,5 +93,38 @@ public class form1 {
 
             }
         });
+        seno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.sin(numero1);
+                float resultado2 = (float) Math.sin(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+            }
+        });
+        coseno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.cos(numero1);
+                float resultado2 = (float) Math.cos(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+            }
+        });
+        tangente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.tan(numero1);
+                float resultado2 = (float) Math.tan(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+            }
+        });
     }
 }
