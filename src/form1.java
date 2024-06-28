@@ -50,6 +50,8 @@ public class form1 {
                 float numero2 = Float.parseFloat(num2.getText());
                 if (numero2 == 0) {
                     respuesta1.setText("No se puede dividir para 0");
+                    respuesta2.setText("");
+
                 }else {
                     float resultado = numero1 / numero2;
                     respuesta1.setText("Respuesta: " + String.format("%.2f", resultado));
